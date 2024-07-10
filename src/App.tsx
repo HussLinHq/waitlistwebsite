@@ -41,24 +41,29 @@ export default function App() {
             Your One-Stop Platform For Seamless Interactions With <br /> Artisans And Professionals From All Walks Of Life.
           </p>
         </div>
-        <div className="mt-4 p-4">
-          {!submitted ? (
-            <form className="items-center" onSubmit={sendEmail}>
-              <input
-                type="email"
-                name="from_name"
-                placeholder="Your Email Address"
-                className="mb-2 p-4 border border-gray-300 rounded-2xl w-3/6 text-[#597da3] bg-[#E1F0FF]"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
-              <button type="submit" className="p-4 rounded-2xl mx-4 text-white bg-[#007BFF]">Join Waitlist!</button>
-            </form>
-          ) : (
-            <p>Thank you for joining our waitlist.</p>
-          )}
-        </div>
+        <div className="mt-4 p-4 flex justify-center items-center md:text-center">
+  {!submitted ? (
+    <form className="w-full max-w-md mx-auto" onSubmit={sendEmail}>
+      <div className="flex flex-col md:flex-row items-center">
+        <input
+          type="email"
+          name="from_name"
+          placeholder="Your Email Address"
+          className="mb-2 md:mb-0 md:mr-2 p-4 border border-gray-300 rounded-2xl w-full md:w-auto text-[#597da3] bg-[#E1F0FF]"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+        <button type="submit" className="p-4 rounded-2xl text-white bg-[#007BFF] w-full md:w-auto">Join Waitlist!</button>
+      </div>
+    </form>
+  ) : (
+    <p>Thank you for joining our waitlist.</p>
+  )}
+</div>
+
+
+
         <div className="flex gap-4 mt-4">
           <div className="bg-[#007BFF] rounded-full p-2">
             <a href="https://www.linkedin.com/company/husslin/about/?viewAsMember=true" target="_blank" rel="noopener noreferrer">
