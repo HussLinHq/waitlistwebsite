@@ -62,8 +62,6 @@ export default function App() {
   )}
 </div>
 
-
-
         <div className="flex gap-4 mt-4">
           <div className="bg-[#007BFF] rounded-full p-2">
             <a href="https://www.linkedin.com/company/husslin/about/?viewAsMember=true" target="_blank" rel="noopener noreferrer">
